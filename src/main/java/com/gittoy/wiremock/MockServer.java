@@ -37,16 +37,16 @@ public class MockServer {
 	 * @param args
 	 * @throws IOException 
 	 */
-	public static void main(String[] args) throws IOException {
-
-		// 指定服务器地址和端口
-		configureFor(8062);
-		// 清空之前的配置
-		removeAllMappings();
-		// 收到某个URL的请求之后，会到指定的文件中读取内容作为响应返回。
-		mock("/order/1", "01");
-		mock("/order/2", "02");
-	}
+//	public static void main(String[] args) throws IOException {
+//
+//		// 指定服务器地址和端口
+//		configureFor(8062);
+//		// 清空之前的配置
+//		removeAllMappings();
+//		// 收到某个URL的请求之后，会到指定的文件中读取内容作为响应返回。
+//		mock("/order/1", "01");
+//		mock("/order/2", "02");
+//	}
 
 	private static void mock(String url, String fileName) throws IOException {
 		ClassPathResource resource = new ClassPathResource("mock/response/" + fileName + ".txt");
